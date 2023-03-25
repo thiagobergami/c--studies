@@ -46,4 +46,26 @@ int main(){
 
     return 0;
 }
+
+Pass by reference
+
+Sometimes we want to be able to change the actual parameter from within the function body
+
+void scale_number(int &num);
+
+int main(){
+    int number (1000);
+    scale_number(number);   //call
+
+    cout << number << endl; //100
+
+    return 0;
+}
+
+void scale_number(int &num){ //definition
+    if(num > 100)
+        num = 100;
+}
+
+
 */
