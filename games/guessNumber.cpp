@@ -63,8 +63,8 @@ int main()
 {
     vector<Difficulty> difficulties;
     difficulties.push_back(Difficulty("EASY", 12));
-    difficulties.push_back(Difficulty("MEDIUM", 8));
-    difficulties.push_back(Difficulty("HARD", 6));
+    difficulties.push_back(Difficulty("MEDIUM", 10));
+    difficulties.push_back(Difficulty("HARD", 8));
 
     srand(static_cast<unsigned int>(time(0))); // seed random number generator
     int randomNumber = rand();

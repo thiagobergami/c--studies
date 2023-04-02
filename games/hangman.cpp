@@ -53,6 +53,7 @@ int main()
     const string SECRET_WORD = words[randomIndex];
     string used = "";
     string soFar(SECRET_WORD.size(), '-');
+    cout << SECRET_WORD;
     cout << "Welcome to Hangman. Good Luck!" << endl;
     do
     {
@@ -96,7 +97,7 @@ int main()
         else
         {
             cout << "WRONG\n";
-            wrong++;
+            wrong++;            
         }
         system("clear");
     } while ((wrong < MAX_WRONG) && (soFar != SECRET_WORD));

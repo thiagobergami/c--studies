@@ -69,19 +69,31 @@ int main()
 
     vector_ptr = &stooges;
 
-    cout << "First stooge: " <<(*vector_ptr).at(0) <<endl; //Larry
+    cout << "First stooge: " << (*vector_ptr).at(0) << endl; // Larry
 
-    cout <<"Stooges: ";
-    for(string stooge: *vector_ptr)
-        cout<<stooge<<" ";
+    cout << "Stooges: ";
+    for (string stooge : *vector_ptr)
+        cout << stooge << " ";
     cout << endl;
 
     cout << "--------------------------------------" << endl;
-    enum difficulty {NOVICE, EASY, NORMAL};
+    enum difficulty
+    {
+        NOVICE,
+        EASY,
+        NORMAL
+    };
 
     difficulty myDif = EASY;
 
     cout << myDif << endl;
+
+    cout << "--------------------------------------" << endl;
+
+    int myScore = 1000;
+    int& rMikeScore = myScore; //& -> reference operator.
+
+    cout << rMikeScore << endl;
 
     return 0;
 }

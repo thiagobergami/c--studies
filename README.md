@@ -16,3 +16,10 @@ Guess the number it's a game where the player has to guess the random number gen
 ![alt text](games/screen/hangman.jpeg)
 
 In the Hangman program, the computer picks a secret word and the player tries to guess it one letter at a time. The player is allowed eight incorrect guesses. If he or she fails to guess the word in time, the player is hanged and the game is over.
+
+### 03 - Tic-Tac-Toe
+[tictactoe](/games/tictactoe.cpp)
+
+![alt text](/games/screen/tictactoe.jpeg)
+
+In this game you will be face to face against the machine in a world match of Tic-Tac-Toe. Good luck
