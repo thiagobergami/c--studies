@@ -14,7 +14,7 @@ const char NO_ONE = 'N';
 
 // functions prototypes
 void instructions();
-void displayBoard(const vector<char> &board);
+void displayBoard(vector<char> *const pBboard);
 char askPlayer(string question);
 char opponent(char piece);
 char humanPiece();
@@ -31,7 +31,7 @@ int main()
     const int NUM_SQUARES = 9;
     vector<char> board(NUM_SQUARES, EMPTY);
     instructions();
-    displayBoard(board);
+    displayBoard(&board);
 
     char humanPlayer = humanPiece();
     char computerPlayer = opponent(humanPlayer);
@@ -50,7 +50,7 @@ int main()
             board[move] = computerPlayer;
         }
         system("clear");
-        displayBoard(board);
+        displayBoard(&board);
         turn = opponent(turn);
     }
     announceWinner(winner(board), computerPlayer, humanPlayer);
@@ -68,7 +68,6 @@ void announceWinner(char winner, char computer, char human)
         cout << winner << "'s won!\n";
     }
 }
-
 void instructions()
 {
     cout << "Welcome to Tic-Tac-Toe.\n";
@@ -84,7 +83,6 @@ void instructions()
     cout << " 6 | 7 | 8  \n\n";
     cout << "-------------------------- \n";
 }
-
 char winner(const vector<char> &board)
 {
     // the vector passed in this function it not copied. It also means that the vector is safeguarded against any change.
@@ -114,7 +112,6 @@ char winner(const vector<char> &board)
 
     return NO_ONE;
 }
-
 char opponent(char piece)
 {
     if (piece == X)
@@ -126,7 +123,6 @@ char opponent(char piece)
         return X;
     }
 }
-
 char askPlayer(string question)
 {
     char response;
@@ -138,7 +134,6 @@ char askPlayer(string question)
 
     return response;
 }
-
 char humanPiece()
 {
     char whoFirst = askPlayer("Do you require first move?");
@@ -153,22 +148,20 @@ char humanPiece()
         return O;
     }
 }
-
-void displayBoard(const vector<char> &board)
+void displayBoard(vector<char> *const pBboard)
 {
     cout << "\n"
-         << board[0] << "  | " << board[1] << " | " << board[2];
+         << (*pBboard)[0] << "  | " << (*pBboard)[1] << " | " << (*pBboard)[2];
     cout << "\n"
          << "-----------";
     cout << "\n"
-         << board[3] << "  | " << board[4] << " | " << board[5];
+         << (*pBboard)[3] << "  | " << (*pBboard)[4] << " | " << (*pBboard)[5];
     cout << "\n"
          << "-----------";
     cout << "\n"
-         << board[6] << "  | " << board[7] << " | " << board[8];
+         << (*pBboard)[6] << "  | " << (*pBboard)[7] << " | " << (*pBboard)[8];
     cout << "\n\n";
 }
-
 int askNumber(string question, int high, int low)
 {
     int number;
@@ -180,7 +173,6 @@ int askNumber(string question, int high, int low)
 
     return number;
 }
-
 int playerMove(const vector<char> &board, char human)
 {
     int move = askNumber("Make your move :", (board.size() - 1), 0);

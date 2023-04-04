@@ -60,7 +60,11 @@ int main()
 
     cout << "*score_ptr:  " << *score_ptr << endl;
     cout << "score:  " << score << endl;
-
+    cout << "--------------------------------------" << endl;
+    string letter{"hello"};
+    string *letter_prt{&letter};
+    cout << "letter " << letter << endl;
+    cout << "a " << letter_prt->size() << endl;
     cout << "--------------------------------------" << endl;
     cout << "Dereferencing a vector Pointer" << endl;
 
@@ -91,7 +95,7 @@ int main()
     cout << "--------------------------------------" << endl;
 
     int myScore = 1000;
-    int& rMikeScore = myScore; //& -> reference operator.
+    int &rMikeScore = myScore; //& -> reference operator.
 
     cout << rMikeScore << endl;
 
