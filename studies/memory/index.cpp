@@ -29,11 +29,13 @@ int main()
 }
 
 void leak1()
-{
+{   
+    //In this section, whe a leaking the memory, since there is no way to access this data before executed.
     int *drip1 = new int(30);
 }
 void leak2()
-{
+{   
+    //The leak here is caused by the new value of drip2. when assigned by 100, the memory allocated to 50 is lost.
     int *drip2 = new int(50);
     drip2 = new int(100);
     delete drip2;
