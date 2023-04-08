@@ -27,3 +27,10 @@ In this game you will be face to face against the machine in a world match of Ti
 ### 04 - Tamagotchi
 [tamagotchi](/games/tamagotchi.cpp)
 Tamagotchi is a virtual pet that you can feed and play with.
+
+### 05 - GameLobby
+[gameLobby](/games/gameLobby.cpp)
+
+![alt text](/games/screen/lobby.jpeg)
+
+Game Lobby it's a simple game lobby.
