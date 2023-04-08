@@ -23,3 +23,7 @@ In the Hangman program, the computer picks a secret word and the player tries to
 ![alt text](/games/screen/tictactoe.jpeg)
 
 In this game you will be face to face against the machine in a world match of Tic-Tac-Toe. Good luck
+
+### 04 - Tamagotchi
+[tamagotchi](/games/tamagotchi.cpp)
+Tamagotchi is a virtual pet that you can feed and play with.
