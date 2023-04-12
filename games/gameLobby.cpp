@@ -39,7 +39,7 @@ int main()
         default:
             cout << "That was not a valid choice.\n";
         }
-        system("clear");
+        //system("clear");
     } while (choice != 0);
 
     return 0;

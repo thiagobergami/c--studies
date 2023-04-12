@@ -18,7 +18,7 @@ public:
     void Clear();
 
 private:
-    Player *m_pHead;
+    Player *m_pHead; // Using aggregration 
 };
 
 #endif
