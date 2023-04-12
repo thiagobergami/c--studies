@@ -34,3 +34,10 @@ Tamagotchi is a virtual pet that you can feed and play with.
 ![alt text](/games/screen/lobby.jpeg)
 
 Game Lobby it's a simple game lobby.
+
+### 06 - BlackJack
+[blackjack](/games/blackjack/index.cpp)
+
+![blackjack](games/screen/blackjack.jpeg)
+
+Blackjack game
