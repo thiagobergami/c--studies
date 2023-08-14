@@ -55,7 +55,8 @@
         "map": "cpp",
         "ratio": "cpp",
         "iomanip": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xiosbase": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
