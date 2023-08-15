@@ -1,0 +1,2 @@
+﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  HelloWorld.vcxproj -> C:\Users\Thiago\Desktop\code\cpp-studies\studies\libraries\HelloWorld\x64\Debug\HelloWorld.exe
