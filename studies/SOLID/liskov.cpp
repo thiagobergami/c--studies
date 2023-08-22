@@ -1,0 +1,6 @@
+/* 
+Liskov Substitution Principle
+
+The subclass shoud be substitutable for their base classes.
+
+*/
