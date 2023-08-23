@@ -11,7 +11,7 @@ void ForEach(const std::vector<int> &values, void(*func)(int))
 int main()
 {
     std::vector<int> values = {1, 5, 4, 2, 3};
-    //
+    //LAMBDAS
     ForEach(values, [](int value) { std::cout << "Value: " << value << std::endl; });
 
     std::cin.get();
