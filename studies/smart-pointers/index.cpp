@@ -17,14 +17,28 @@ public:
         cout << "Destroyed Enitity" << endl;
     }
 
-    void Print(){
+    void Print()
+    {
         cout << "Hello unique pointer" << endl;
     }
 };
 
-int main()
+auto delEntity = [](Entity *pEntity)
 {
+    cout << "Deleting : " << pEntity << endl;
+    delete pEntity;
+};
+
+int
+main()
+{
+
+    unique_ptr<Entity, delEntity> entity(new Entity())
     {
+        cout << "creating entity" << endl;
+    };
+
+    /* {
         shared_ptr<Entity> e0;
         {
             // That will create a unique point. UNique pointer represent exclusive ownership
@@ -33,8 +47,8 @@ int main()
 
 
             // That will create a shared pointer
-            // The difference between this implementation and the new that I used before it's 
-            // when we use new, the compiler create a block of memory called control block where store that reference count 
+            // The difference between this implementation and the new that I used before it's
+            // when we use new, the compiler create a block of memory called control block where store that reference count
             shared_ptr<Entity> sharedEntity = make_shared<Entity>();
             e0 = sharedEntity;
 
@@ -46,9 +60,7 @@ int main()
 
         // when all the reference die, the pointer die too
         e0->Print();
-    }
-    
+    } */
 
     cin.get();
 }
-
