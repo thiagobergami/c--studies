@@ -12,11 +12,6 @@ public:
         cout << "Created Entity!" << endl;
     }
 
-    ~Entity()
-    {
-        cout << "Destroyed Enitity" << endl;
-    }
-
     void Print()
     {
         cout << "Hello unique pointer" << endl;
@@ -29,14 +24,10 @@ auto delEntity = [](Entity *pEntity)
     delete pEntity;
 };
 
-int
-main()
+int main()
 {
 
-    unique_ptr<Entity, delEntity> entity(new Entity())
-    {
-        cout << "creating entity" << endl;
-    };
+    unique_ptr<Entity, decltype(delEntity)> entity(new Entity(), delEntity);
 
     /* {
         shared_ptr<Entity> e0;
@@ -61,6 +52,7 @@ main()
         // when all the reference die, the pointer die too
         e0->Print();
     } */
-
     cin.get();
+
+    return 0;
 }
